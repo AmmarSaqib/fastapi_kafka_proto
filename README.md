@@ -1,0 +1,1 @@
+# FastAPI with Confluent Kafka Boiler Plate
