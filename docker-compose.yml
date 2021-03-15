@@ -1,0 +1,18 @@
+version: "3.3"
+
+services: 
+  app_a:
+      build: backend/app_a/
+      container_name: app_a
+      command: sh ./docker-entrypoint.sh
+      restart: always
+      ports:
+        - $APP_A_PORT:$APP_A_PORT
+
+  app_b:
+      build: backend/app_b/
+      container_name: app_b
+      command: sh ./docker-entrypoint.sh
+      restart: always
+      ports:
+        - $APP_B_PORT:$APP_B_PORT
