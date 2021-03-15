@@ -8,6 +8,8 @@ services:
       restart: always
       ports:
         - $APP_A_PORT:$APP_A_PORT
+      environment:
+        APP_A_PORT: $APP_A_PORT
 
   app_b:
       build: backend/app_b/
@@ -16,3 +18,5 @@ services:
       restart: always
       ports:
         - $APP_B_PORT:$APP_B_PORT
+      environment:
+        APP_B_PORT: $APP_B_PORT
